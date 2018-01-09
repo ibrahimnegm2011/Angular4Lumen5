@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {BackendService} from './backend.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor(
+      private beService: BackendService
+  ){}
+
+  public getMovies(){
+    this.beService.listMovies();
+  }
 }
