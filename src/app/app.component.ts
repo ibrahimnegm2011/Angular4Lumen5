@@ -12,8 +12,4 @@ export class AppComponent {
   constructor(
       private beService: BackendService
   ){}
-
-  public getMovies(){
-    this.beService.listMovies();
-  }
 }
